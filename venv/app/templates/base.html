@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuidado del Medio Ambiente</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* TÍTULOS */
+        .titulo-principal {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1b5e20;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .subtitulo {
+            font-size: 1.6rem;
+            color: #388e3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* TARJETAS */
+        .card {
+            border-radius: 20px;
+        }
+
+        .card-body {
+            padding: 40px;
+        }
+
+        /* TEXTO */
+        .text-justify {
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* NAVBAR */
+        .navbar-brand {
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+        }
+
+        /* ANIMACIÓN RECICLAJE */
+        .reciclaje-container span {
+            position: fixed;
+            top: -50px;
+            font-size: 2rem;
+            animation: caer linear forwards;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        @keyframes caer {
+            to {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-lg">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-4" href="{{ url_for('inicio') }}">
+            🌍 Medio Ambiente
+        </a>
+
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="{{ url_for('importancia') }}">Importancia</a>
+            <a class="nav-link" href="{{ url_for('gestion') }}">Gestión Ambiental</a>
+            <a class="nav-link" href="{{ url_for('futuro') }}">Futuro</a>
+            <a class="nav-link" href="{{ url_for('tresr') }}">Las 3R</a>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="container mt-4 mb-5">
+
+    <!-- Breadcrumb -->
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="{{ url_for('inicio') }}">Inicio</a>
+            </li>
+            <li class="breadcrumb-item active fw-bold">{{ seccion }}</li>
+        </ol>
+    </nav>
+
+    {% block contenido %}{% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-success text-white text-center p-4 shadow-lg">
+    <p class="mb-1 fw-bold">Aplicación Web Educativa</p>
+    <p class="mb-0">Cuidado del Medio Ambiente 🌱 | 2026</p>
+</footer>
+
+<!-- SÍMBOLOS DE RECICLAJE -->
+<div class="reciclaje-container"></div>
+
+<script>
+    const container = document.querySelector('.reciclaje-container');
+    const simbolos = ['♻️', '🌱', '🍃'];
+
+    setInterval(() => {
+        const span = document.createElement('span');
+        span.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+        span.style.left = Math.random() * 100 + 'vw';
+        span.style.animationDuration = (Math.random() * 3 + 3) + 's';
+        container.appendChild(span);
+
+        setTimeout(() => {
+            span.remove();
+        }, 6000);
+    }, 400);
+</script>
+
+</body>
+</html>

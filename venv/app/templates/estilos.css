@@ -1,0 +1,15 @@
+.reciclaje-container span {
+    position: fixed;
+    top: -50px;
+    font-size: 2rem;
+    animation: caer linear forwards;
+    z-index: 999;
+    pointer-events: none;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}

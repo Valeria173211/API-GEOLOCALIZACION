@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block contenido %}
+
+{% if seccion == "Inicio" %}
+<h2 class="mb-3">El Medio Ambiente y su Importancia</h2>
+
+<p>
+El medio ambiente está conformado por todos los elementos naturales que rodean a los
+seres vivos, como el agua, el aire, el suelo, la flora y la fauna. Estos elementos
+interactúan entre sí y hacen posible la vida en el planeta Tierra.
+</p>
+
+<p>
+En la actualidad, el medio ambiente enfrenta múltiples amenazas provocadas principalmente
+por la actividad humana, como la contaminación, la deforestación y el uso excesivo de
+recursos naturales. Por ello, es fundamental crear conciencia sobre su cuidado.
+</p>
+
+<img src="https://cdn.pixabay.com/photo/2020/07/03/10/28/waterfall-5365926_1280.jpg"
+     class="img-fluid rounded shadow mb-4">
+
+<p>
+Cuidar el medio ambiente no solo significa proteger la naturaleza, sino también asegurar
+una mejor calidad de vida para las personas, ya que un entorno sano contribuye a la salud,
+el bienestar y el desarrollo sostenible.
+</p>
+
+<img src="https://th.bing.com/th/id/R.c665058ecd09abf84ae6c6798da8b0e2?rik=Ic%2f2przr%2bDy%2biw&pid=ImgRaw&r=0"
+     class="img-fluid rounded shadow">
+
+{% elif seccion == "Importancia" %}
+<h2>Importancia del Cuidado del Medio Ambiente</h2>
+
+<p>
+El cuidado del medio ambiente es esencial porque de él obtenemos los recursos necesarios
+para sobrevivir, como el agua potable, los alimentos y la energía. Sin estos recursos,
+la vida humana no sería posible.
+</p>
+
+<p>
+Además, proteger el medio ambiente ayuda a conservar la biodiversidad, es decir, la gran
+variedad de especies animales y vegetales que habitan en el planeta y que cumplen funciones
+vitales en los ecosistemas.
+</p>
+
+<ul>
+    <li>Mejora la salud de las personas</li>
+    <li>Reduce la contaminación del aire y del agua</li>
+    <li>Previene desastres naturales</li>
+    <li>Garantiza recursos para futuras generaciones</li>
+</ul>
+
+<img src="https://static.vecteezy.com/system/resources/previews/007/951/005/non_2x/globe-glass-on-grass-with-sunshine-environment-concept-free-photo.jpg"
+     class="img-fluid rounded shadow">
+
+{% elif seccion == "Gestión Ambiental" %}
+<h2>Sistema de Gestión Ambiental</h2>
+
+<p>
+Un Sistema de Gestión Ambiental (SGA) es un conjunto de acciones, normas y procedimientos
+que permiten a una organización identificar, controlar y reducir los impactos negativos
+que sus actividades generan en el medio ambiente.
+</p>
+
+<p>
+Estos sistemas ayudan a promover el uso responsable de los recursos naturales, el
+cumplimiento de la legislación ambiental y la mejora continua en los procesos productivos.
+</p>
+
+<p>
+Implementar un Sistema de Gestión Ambiental demuestra el compromiso de las empresas con
+la sostenibilidad y el respeto por el entorno natural.
+</p>
+
+<img src=""
+     class="img-fluid rounded shadow">
+
+{% elif seccion == "Futuras Generaciones" %}
+<h2>Preservar el Entorno para las Futuras Generaciones</h2>
+
+<p>
+Las futuras generaciones dependen de las decisiones que tomamos hoy. Si no cuidamos el
+medio ambiente, los recursos naturales podrían agotarse y afectar gravemente la calidad
+de vida de quienes vendrán después.
+</p>
+
+<p>
+La educación ambiental es clave para crear conciencia y fomentar valores de respeto,
+responsabilidad y compromiso con el planeta.
+</p>
+
+<p>
+Proteger el medio ambiente hoy es asegurar un futuro sostenible mañana.
+</p>
+
+<img src="https://tse3.mm.bing.net/th/id/OIP.5uRY90EWov1iIPm3tXKHFQHaEJ?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3"
+     class="img-fluid rounded shadow">
+
+{% elif seccion == "3R" %}
+<h2>Las 3 R: Reducir, Reutilizar y Reciclar</h2>
+
+<p>
+Las 3 R son acciones fundamentales que contribuyen al cuidado del medio ambiente al
+disminuir la cantidad de residuos y aprovechar mejor los recursos.
+</p>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <h4>Reducir</h4>
+        <p>
+        Consiste en disminuir el consumo innecesario de productos y evitar generar basura.
+        </p>
+        <img src="https://tse3.mm.bing.net/th/id/OIP.Z96ci7Ryw2PGDarjoWT0LQHaES?cb=defcachec2&w=1209&h=700&rs=1&pid=ImgDetMain&o=7&rm=3"
+             class="img-fluid rounded shadow">
+    </div>
+
+    <div class="col-md-4">
+        <h4>Reutilizar</h4>
+        <p>
+        Implica volver a usar los objetos antes de desecharlos, dándoles una segunda vida.
+        </p>
+        <img src=" https://tse1.mm.bing.net/th/id/OIP.zRwPTgWdjlOs0OiG2WPXoAHaEO?cb=defcachec2&w=800&h=457&rs=1&pid=ImgDetMain&o=7&rm=3"
+             class="img-fluid rounded shadow">
+    </div>
+
+    <div class="col-md-4">
+        <h4>Reciclar</h4>
+        <p>
+        Es el proceso de separar residuos para transformarlos en nuevos productos útiles.
+        </p>
+        <img src="https://tse2.mm.bing.net/th/id/OIP.PhvohxPseZQVru_6N1k4EAHaEO?cb=defcachec2&rs=1&pid=ImgDetMain&o=7&rm=3"
+             class="img-fluid rounded shadow">
+    </div>
+</div>
+
+{% endif %}
+{% endblock %}
